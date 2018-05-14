@@ -14,7 +14,7 @@ public class IsNotNull implements ValidityCheck {
     }
 
     public String getCheckName() {
-	return "Not Null Check";
+	return "IsNotNull Check";
     }
 
 }

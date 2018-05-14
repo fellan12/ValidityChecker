@@ -5,33 +5,32 @@ import omegapoint.validitycheck.IsNotNull;
 import omegapoint.validitychecker.ValidityChecker;
 import omegapoint.data.CandidateData;
 
+import java.util.*;
+
 public class Main {
 
     public static void main( String[] args ) {
 
-	ValidityChecker checker = new ValidityChecker();
+	ValidityChecker checker = new ValidityChecker("results");
+	List<CandidateData<Long>> dataLong = new ArrayList<CandidateData<Long>> ();
+	List<CandidateData<String>> dataString = new ArrayList<CandidateData<String>> ();
+
 	//Correct
-	CandidateData<Long> id1 = new CandidateData<Long>(197802022389L);
-	CandidateData<Long> id2 = new CandidateData<Long>(198204112380L);
-	CandidateData<String> id3 = new CandidateData<String>("197802022389L");
-	CandidateData<String> id4 = new CandidateData<String>("198204112380L");
-	CandidateData<String> id5 = new CandidateData<String>("19780202-2389");
-	CandidateData<String> id6 = new CandidateData<String>("19820411-2380");
+	dataLong.add(new CandidateData<Long>(197802022389L));
+	dataLong.add(new CandidateData<Long>(198204112380L));
+	dataString.add(new CandidateData<String>("197802022389L"));
+	dataString.add(new CandidateData<String>("198204112380L"));
+	dataString.add(new CandidateData<String>("19780202-2389"));
+	dataString.add(new CandidateData<String>("19820411-2380"));
 
 	//Wrong
-	CandidateData<String> id7 = new CandidateData<String>("19820411-2381");
-	CandidateData<String> id8 = new CandidateData<String>(null);
+	dataString.add(new CandidateData<String>("19820411-2381"));
+	dataString.add(new CandidateData<String>(null));
 
 	checker.addCheck(new IsNotNull());
 	checker.addCheck(new IsSocialSecurityNumber());
 
-	checker.run(id1);
-	checker.run(id2);
-	checker.run(id3);
-	checker.run(id4);
-	checker.run(id5);
-	checker.run(id6);
-	checker.run(id7);
-	checker.run(id8);
+	checker.run(dataLong);
+	checker.run(dataString);
     }
 }

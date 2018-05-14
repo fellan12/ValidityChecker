@@ -90,7 +90,7 @@ public class IsSocialSecurityNumber implements ValidityCheck {
 
 
     public String getCheckName() {
-	return "Social Security Number Check";
+	return "IsSocialSecurityNumber Check";
     }
 
 }
