@@ -26,7 +26,7 @@ Run the `ValidityChecker` using the `run()` method and some `CandidateData` obje
 `checker.run(data);`  
 
 The output would be:  
-`CandidateDataID: 326866b1-cfc6-4ad0-b8fa-0db2e2b3d664`
+`CandidateDataID: 326866b1-cfc6-4ad0-b8fa-0db2e2b3d664`  
 `IsNotNull Check: PASSED`  
 `IsSocialSecurityNumber Check: PASSED`  
 
