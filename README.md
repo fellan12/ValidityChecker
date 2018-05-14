@@ -30,4 +30,4 @@ The output would be:
 `IsNotNull Check: PASSED`  
 `IsSocialSecurityNumber Check: PASSED`  
 
-Where `CandidateDataID` is an identifier given to the data by the `CandidateData` class. (No really use now, but can be in future applications)
+Where `CandidateDataID` is an identifier given to the data by the `CandidateData` class. (No real use case now, but can be in future applications)
