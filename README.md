@@ -1,3 +1,5 @@
+# THIS CODE WAS PART OF AN TECHNICAL INTERVIEW PROCESS
+
 # ValidityChecker
 A simple maven project that checks if some candidate data is valid or not, given some validity checks. In this small example, the ValidityChecker have the implementations of two checks: IsNotNull and IsSocialSecurityNumber.  
 
